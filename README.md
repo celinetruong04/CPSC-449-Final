@@ -108,29 +108,21 @@ Body:
 
 ---
 
-## Create Observation (Protected Endpoint)
+# API Screenshots
 
-POST:
-```text
-http://localhost:8080/api/observations
-```
+## Register Request
+<img width="3840" height="2160" alt="Register" src="https://github.com/user-attachments/assets/42c6ae88-1d35-4945-ae3c-83f438259d56" />
 
-Authorization:
-```text
-Bearer Token
-```
+## Login Request
+<img width="3840" height="2160" alt="Login" src="https://github.com/user-attachments/assets/ec922bcd-58d2-43eb-87af-4c927af585e3" />
 
-Body:
-```json
-{
-  "spotName": "Moonlight Beach",
-  "waveHeight": 4.5,
-  "windSpeed": 8.2,
-  "windDirection": "W",
-  "tide": "mid",
-  "rating": 4,
-  "notes": "Clean conditions with decent size.",
-  "observationDate": "2026-05-06"
-}
-```
----
+
+## Create Observation
+<img width="3840" height="2160" alt="Add Observation" src="https://github.com/user-attachments/assets/dda6b160-f787-43b5-b787-61ff1f174524" />
+
+
+## Get Observations
+<img width="3840" height="2160" alt="Get Observations" src="https://github.com/user-attachments/assets/b09eb636-79b5-4ad4-ae47-a069c02fd95b" />
+
+## Delete Observations
+<img width="3840" height="2160" alt="Delete Observations" src="https://github.com/user-attachments/assets/11353730-e55b-4062-b81f-d4c34aa47fef" />
