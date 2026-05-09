@@ -1,5 +1,6 @@
 package com.surfapi.surfobservationapi.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDate;
@@ -7,6 +8,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class ObservationRequest {
+    @NotBlank(message = "Spot name is required.")
     private String spotName;
     private Double waveHeight;
     private Double windSpeed;

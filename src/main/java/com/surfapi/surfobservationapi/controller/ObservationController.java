@@ -3,6 +3,7 @@ package com.surfapi.surfobservationapi.controller;
 import com.surfapi.surfobservationapi.dto.ObservationRequest;
 import com.surfapi.surfobservationapi.dto.ObservationResponse;
 import com.surfapi.surfobservationapi.service.ObservationService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -24,7 +25,7 @@ public class ObservationController {
     // create a new observation for authenticated user
     @PostMapping
     public ResponseEntity<ObservationResponse> createObservation(
-            @RequestBody ObservationRequest request,
+            @Valid @RequestBody ObservationRequest request,
             Authentication authentication) {
 
         Long userId = (Long) authentication.getPrincipal();
@@ -65,7 +66,7 @@ public class ObservationController {
     @PutMapping("/{id}")
     public ResponseEntity<ObservationResponse> updateObservation(
             @PathVariable Long id,
-            @RequestBody ObservationRequest request,
+            @Valid @RequestBody ObservationRequest request,
             Authentication authentication) {
 
         Long userId = (Long) authentication.getPrincipal();
