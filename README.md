@@ -63,11 +63,7 @@ docker build -t surf-observation-api:1.0 .
 Replace the database password if necessary.
 
 ```bash
-docker run -d --name surf-observation-api -p 8080:8080 \
--e SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/surf_observation_db \
--e SPRING_DATASOURCE_USERNAME=postgres \
--e SPRING_DATASOURCE_PASSWORD=postgres123 \
-surf-observation-api:1.0
+docker run -d --name surf-observation-api -p 8080:8080 -e SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/surf_observation_db -e SPRING_DATASOURCE_USERNAME=postgres -e SPRING_DATASOURCE_PASSWORD=postgres123 surf-observation-api:1.0
 ```
 
 # View Container Logs
