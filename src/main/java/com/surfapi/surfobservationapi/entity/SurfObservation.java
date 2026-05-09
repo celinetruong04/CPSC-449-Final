@@ -34,7 +34,10 @@ public class SurfObservation {
 
     private LocalDate observationDate;
 
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
+
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", insertable = false, updatable = false)
     private User user;
 }
